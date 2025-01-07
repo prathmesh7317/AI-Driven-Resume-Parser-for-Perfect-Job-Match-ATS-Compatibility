@@ -1,0 +1,8 @@
+*.csv
+*.xlsx
+*.env
+ATS_SCORE_ABOVE_55/
+ATS_SCORE_BELOW_55/
+user_resumes/
+
+#To ignore CSV/Excel files because CSV File contains candidate data 
