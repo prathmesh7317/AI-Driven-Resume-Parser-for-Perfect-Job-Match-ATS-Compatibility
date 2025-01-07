@@ -17,6 +17,6 @@ This project allows job seekers to upload their resumes and match them against j
 - Cosine similarity score and ATS score calculation
 - Suggestions for resume improvement using Gemini AI
 - Categorization of resumes based on similarity scores
-- Export of resume data (skills, experience, contact info) to a CSV file for HR
+- Export of resume data (skills, experience, contact info) to a CSV file to made Recruitment process easier and saves time.
 - Job description matching and feedback for improvement
 
