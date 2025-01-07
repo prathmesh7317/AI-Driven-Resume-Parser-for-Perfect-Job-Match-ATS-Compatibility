@@ -1,0 +1,15 @@
+google
+streamlit
+pdf2image
+pytesseract
+python-docx
+dotenv
+streamlit
+nltk
+spacy
+pinecone-client
+langchain-google-genai
+torch
+textblob
+scikit-learn
+
