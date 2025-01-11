@@ -12,4 +12,8 @@ langchain-google-genai
 torch
 textblob
 scikit-learn
+transformers
+sentencepiece
+openai
+crewai
 
