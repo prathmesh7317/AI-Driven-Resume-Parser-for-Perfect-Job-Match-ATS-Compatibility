@@ -23,6 +23,8 @@ from spacy.matcher import PhraseMatcher
 import nltk
 import zipfile
 import openai
+from crewai import Agent, Task, Crew, Process
+
 
 
 st.set_page_config(layout="wide")
@@ -562,6 +564,58 @@ def get_openai_response(input_text, doc_content, prompt):
 
 
 
+# -------------------------CrewAI AGENTS To generate Cover Letter based oon JD & Resume ----------------------------------------------
+
+def generate_cover_letter(job_description, resume_content):
+
+    # Define the Agent :- Set up 'Worker' who will do this Job
+    cover_letter_agent = Agent(
+        role="Cover Letter Writer",
+        goal="Craft a concise, professional, and tailored cover letter.",
+        backstory=(
+        "You specialize in writing compelling cover letters tailored "
+        "to job descriptions and resumes. Your goal is to keep it concise, focusing on key strengths and qualifications."
+    ),
+        memory=False,
+        tools=[]
+    )
+# Tools:- are important in extending the capabilities of CrewAI agents...
+    
+    # Define the Task:- Describe what agents needs to do & what expected results should be
+    cover_letter_task = Task(
+    description=(
+        "Generate a concise and impactful cover letter based on the provided resume and job description."
+        "The cover letter should be professional, personalized, and highlight the candidate's skills strengths"
+        "\nInputs:\n- Resume: {resume}\n- Job Description: {job_description}"
+    ),
+    expected_output="A structured, concise cover letter with an Introduction, Key Strengths, and Closing.",
+    agent=cover_letter_agent
+)
+    
+    # Create the Crew :- Put evrything together(Task,Agents) Crew manages workflows smoothly.
+    cover_letter_crew = Crew(
+        agents=[cover_letter_agent],
+        tasks=[cover_letter_task],
+        process=Process.sequential
+    )
+    
+    # Inputs to the Crew
+    inputs = {
+        'resume': resume_content,
+        'job_description': job_description
+    }
+    
+    # Generate Cover Letter
+    try:
+        result = cover_letter_crew.kickoff(inputs=inputs)
+        task_output = cover_letter_task.output
+
+        return task_output.raw
+    
+    except Exception as e:
+        st.error(f"Error during cover letter generation: {str(e)}")
+
+# --------------------------------------------------------------------------------------------------------------------
 
 
 # Output placeholders
@@ -733,46 +787,37 @@ with st.container():
                     st.error('Please Mention Job Description')
 
 
-    # Logic for "Generate Cover Letter" button
+    # -----------------------------------------------Generate Cocer letter Section__------------------------------------------------------
+
+
     if submit5: # When the "Generate Cover Letter" button is clicked
-        if uploaded_file:
-            save_uploaded_file(uploaded_file)
+            if uploaded_file:
+                save_uploaded_file(uploaded_file)
 
-            if uploaded_file.type == "application/pdf":
-                doc_content = input_pdf_setup(uploaded_file)
-                preprocess_doc_content = preprocess_text(doc_content)
+                if uploaded_file.type == "application/pdf":
+                    doc_content = input_pdf_setup(uploaded_file)
+                    preprocess_doc_content = preprocess_text(doc_content)
 
-            elif uploaded_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-                doc_content = input_docx_setup(uploaded_file)
-                preprocess_doc_content = preprocess_text(doc_content)
+                elif uploaded_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+                    doc_content = input_docx_setup(uploaded_file)
+                    preprocess_doc_content = preprocess_text(doc_content)
 
-            elif uploaded_file.type in ["image/jpeg", "image/png", "image/jpg"]:
-                doc_content = input_image_setup(uploaded_file)
-                preprocess_doc_content = preprocess_text(doc_content)
+                elif uploaded_file.type in ["image/jpeg", "image/png", "image/jpg"]:
+                    doc_content = input_image_setup(uploaded_file)
+                    preprocess_doc_content = preprocess_text(doc_content)
 
-            else:
-                st.error("Unsupported file type. Please upload a PDF, DOCX, or image file.")
+                else:
+                    st.error("Unsupported file type. Please upload a PDF, DOCX, or image file.")
 
-            if preprocess_doc_content:
-                if input:
-                    # new = extract_jd_info(input)
-                    # Generate the cover letter using the preprocessed JD and document content
-                    input_text = f"Generate a cover letter in 75 words for a {input}"
-
-                    
-                    if 'tokenizer' in locals(): # Check if the tokenizer is loaded
-                        inputs = tokenizer(input_text, return_tensors="pt")
-                        output = model.generate(**inputs,max_length=800, num_return_sequences=1, no_repeat_ngram_size=2, temperature=0.3)
-                        cover_letter = tokenizer.decode(output[0], skip_special_tokens=True)
-                        # Display the generated cover letter
+                if preprocess_doc_content:
+                    if input:
+                        ai_agents_cover_letter = generate_cover_letter(input,doc_content)
                         st.subheader("Generated Cover Letter :")
-                        st.write(cover_letter)
+                        st.write(ai_agents_cover_letter)
                     else:
-                        st.error("Tokenizer was not successfully loaded. Please check the model path and the loading process.")
-
-
-            else:
-                st.error('Please Mention Job Description')
+                        st.error("Please mention Job Description..")
+                else:
+                    st.error('Please Mention Job Description')
 
 
 
