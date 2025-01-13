@@ -19,7 +19,7 @@ Tailored Content: The AI generates personalized cover letters that align with th
 Time-Saving: Automatically generates a professional and impactful cover letter, saving candidates time and effort.
 Integration with Resume Parsing: The cover letter generation is integrated with the resume matching system, ensuring consistency and relevance in the application process.
 
-##Key Features:
+## Key Features:
 
 #### Resume Upload: Support for multiple formats (PDF, DOCX, image).
 #### OCR-Based Text Extraction and Skill Detection: Uses Spacy NLP to detect skills, experience, and contact information from resumes.
