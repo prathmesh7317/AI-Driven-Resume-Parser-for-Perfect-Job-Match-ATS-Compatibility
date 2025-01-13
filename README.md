@@ -11,7 +11,7 @@ This project allows job seekers to upload their resumes and match them against j
 
 ## New Feature: AI-Powered Cover Letter Generation
 
-In addition to resume parsing, this project now integrates OpenAI-powered AI agents for cover letter generation. Based on the job description (JD) and the parsed resume data, the system uses OpenAI GPT to generate personalized cover letters tailored to the job role. The AI agent analyzes both the resume and JD, extracting relevant skills, experiences, and keywords to create a compelling cover letter that highlights the candidate's qualifications. The generated cover letter can be easily customized and saved for submission.
+In addition to resume parsing, this project now integrates AI agents for cover letter generation. Based on the job description (JD) and the parsed resume data, the system uses OpenAI GPT to generate personalized cover letters tailored to the job role. The AI agent analyzes both the resume and JD, extracting relevant skills, experiences, and keywords to create a compelling cover letter that highlights the candidate's qualifications. The generated cover letter can be easily customized and saved for submission.
 
 ## Key Benefits of Cover Letter Generation:
 
@@ -28,4 +28,4 @@ Integration with Resume Parsing: The cover letter generation is integrated with 
 #### Categorization of Resumes: Resumes are categorized based on similarity scores, with scores above 60% marked for further review.
 #### CSV Export: Exports key resume data (skills, experience, contact info) to a CSV file for HR analysis.
 #### Job Description Matching and Feedback: Provides recommendations on how to improve resumes to align with job descriptions.
-#### OpenAI-Powered Cover Letter Generation: Personalized cover letters generated using OpenAI GPT, tailored to the job description and the candidate's resume.
+#### OpenAI-Powered Cover Letter Generation: Personalized cover letters generated using AI Agents, tailored to the job description and the candidate's resume.
