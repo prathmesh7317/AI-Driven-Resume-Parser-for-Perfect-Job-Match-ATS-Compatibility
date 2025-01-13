@@ -1,4 +1,4 @@
-# AI-Driven-Resume-Parser-for-Perfect-Job-Match-ATS-Compatibility
+# OpenAI-Driven-Resume-Parser-for-Perfect-Job-Match-ATS-Compatibility
 
 ## **Problem Statement**:
 
