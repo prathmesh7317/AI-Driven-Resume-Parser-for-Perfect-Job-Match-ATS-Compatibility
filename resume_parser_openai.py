@@ -68,36 +68,8 @@ class ATS_System:
         pytesseract.pytesseract.tesseract_cmd = r'C:\Users\hp\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'  #set tesseract path here
         
         self.IT_SKILLS = [
-            "python", "java", "c++", "problem-solving", "algorithm design", "debugging", "git", "unit testing", "html", "css",
-            "javascript", "react", "node.js", "express.js", "restful apis", "mongodb", "sql", "agile methodology", "ruby",
-            "android", "ios", "react native", "swift", "kotlin", "flutter", "app design", "mobile ui/ux", "unity",
-            "unreal engine", "game physics", "3d modeling", "multiplayer design", "ai for games", "docker", "kubernetes",
-            "aws", "ci/cd", "infrastructure as code", "ansible", "jenkins", "cloud services", "microcontrollers", "rtos",
-            "circuit design", "hardware-software integration", "sensors", "iot", "python", "r", "machine learning",
-            "data analysis", "sql", "pandas", "numpy", "data visualization", "deep learning", "statistics", "excel",
-            "tableau", "power bi", "data cleaning", "statistical analysis", "report generation", "tensorflow", "pytorch",
-            "keras", "data preprocessing", "model evaluation", "neural networks", "regression", "natural language processing",
-            "reinforcement learning", "research papers", "algorithms", "data warehousing", "etl", "data modeling",
-            "big data technologies", "hadoop", "spark", "etl pipelines", "threat analysis", "risk assessment",
-            "penetration testing", "network security", "firewalls", "siem", "encryption", "ethical hacking", "kali linux",
-            "metasploit", "nmap", "vulnerability assessment", "exploit writing", "web application security",
-            "network security", "cryptography", "risk management", "security governance", "compliance", "incident management",
-            "forensics", "malware analysis", "security tools", "soc", "aws", "azure", "google cloud",
-            "cloud infrastructure design", "cloud security", "automation", "networking", "terraform", "ci/cd",
-            "cloud platforms", "virtualization", "servers", "storage solutions", "tcp/ip", "routing and switching",
-            "vpns", "wireless networks", "network protocols", "storage systems", "nas", "san", "data backup",
-            "disaster recovery", "storage", "project management", "product management", "scrum master", "it manager",
-            "chief technology officer (cto)", "agile", "stakeholder management", "risk management", "budgeting",
-            "team leadership", "strategic planning", "product lifecycle", "software testing", "qa engineering",
-            "automation testing", "performance testing", "test management", "selenium", "junit", "cucumber",
-            "bug tracking", "test plans", "load testing", "ui testing", "unit testing", "regression testing",
-            "manual testing", "security testing", "network administration", "help desk", "it support", "voip",
-            "networking", "linux", "windows", "mac os", "remote desktop", "troubleshooting", "hardware setup", "dns",
-            "dhcp", "vpn", "firewalls", "tcp/ip", "remote access", "cloud support", "ip addressing", "routing",
-            "switching", "it consulting", "business analysis", "systems analysis", "stakeholder management",
-            "project management", "enterprise architecture", "it strategy", "change management", "risk management",
-            "consulting methodology", "requirements gathering", "client communication", "business process improvement",
-            "systems integration"
+            "python", "java", "c++", "problem-solving", "algorithm design", "debugging", "git", "unit testing", "html", "css","javascript", "react", "node.js", "express.js", "restful apis", "mongodb", "sql", "agile methodology", "ruby","android", "ios", "react native", "swift", "kotlin", "flutter", "app design", "mobile ui/ux", "unity","unreal engine", "game physics", "3d modeling", "multiplayer design", "ai for games", "docker", "kubernetes","aws", "ci/cd", "infrastructure as code", "ansible", "jenkins", "cloud services", "microcontrollers", "rtos","circuit design", "hardware-software integration", "sensors", "iot", "python", "r", "machine learning","data analysis", "sql", "pandas", "numpy", "data visualization", "deep learning", "statistics", "excel","tableau", "power bi", "data cleaning", "statistical analysis", "report generation", "tensorflow", "pytorch","keras", "data preprocessing", "model evaluation", "neural networks", "regression", "natural language processing","reinforcement learning", "research papers", "algorithms", "data warehousing", "etl", "data modeling","big data technologies", "hadoop", "spark", "etl pipelines", "threat analysis", "risk assessment","penetration testing", "network security", "firewalls", "siem", "encryption", "ethical hacking", "kali linux","metasploit", "nmap", "vulnerability assessment", "exploit writing", "web application security","network security", "cryptography", "risk management", "security governance", "compliance", "incident management","forensics", "malware analysis", "security tools", "soc", "aws", "azure", "google cloud","cloud infrastructure design", "cloud security", "automation", "networking", "terraform", "ci/cd","cloud platforms", "virtualization", "servers", "storage solutions", "tcp/ip", "routing and switching","vpns", "wireless networks", "network protocols", "storage systems", "nas", "san", "data backup","disaster recovery", "storage", "project management", "product management", "scrum master", "it manager","chief technology officer (cto)", "agile", "stakeholder management", "risk management", "budgeting","team leadership", "strategic planning", "product lifecycle", "software testing", "qa engineering","automation testing", "performance testing", "test management", "selenium", "junit", "cucumber",
+            "bug tracking", "test plans", "load testing", "ui testing", "unit testing", "regression testing","manual testing", "security testing", "network administration", "help desk", "it support", "voip","networking", "linux", "windows", "mac os", "remote desktop", "troubleshooting", "hardware setup", "dns","dhcp", "vpn", "firewalls", "tcp/ip", "remote access", "cloud support", "ip addressing", "routing","switching", "it consulting", "business analysis", "systems analysis", "stakeholder management","project management", "enterprise architecture", "it strategy", "change management", "risk management","consulting methodology", "requirements gathering", "client communication", "business process improvement","systems integration"
         ]
 
         self.input_prompt1 = """
