@@ -1,4 +1,4 @@
-# OpenAI-Driven-Resume-Parser-for-Perfect-Job-Match-ATS-Compatibility
+# OpenAI-Driven-Resume-Analyzer-Platform-Chatbot-Assistance-
 
 ## **Problem Statement**:
 
