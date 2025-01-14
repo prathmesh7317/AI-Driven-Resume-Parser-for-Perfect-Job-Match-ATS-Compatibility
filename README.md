@@ -1,4 +1,4 @@
-# OpenAI-Driven-Resume-Analyzer-Platform-Chatbot-Assistance-
+# OpenAI-Driven-Resume-Analyzer-Platform & Chatbot-Assistance-
 
 ## **Problem Statement**:
 
