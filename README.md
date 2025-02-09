@@ -1,8 +1,8 @@
-# OpenAI-Driven-Resume-Analyzer-Platform & Chatbot-Assistance-
+# DeepSeek-Next-Gen-Resume-Analyzer-Platform with Chatbot-Assistance-
 
 ## **Problem Statement**:
 
-Job seekers often struggle to optimize their resumes for specific job descriptions, leading to missed opportunities due to a lack of alignment with ATS (Applicant Tracking Systems) requirements and recruiter expectations. The manual process of tailoring resumes, generating effective cover letters, and understanding skill gaps is time-consuming and inefficient.
+Job seekers often struggle to optimize their resumes for specific job descriptions, leading to missed opportunities due to a lack of alignment with ATS (Applicant Tracking Systems) requirements and recruiter expectations. The manual process of tailoring resumes, generating effective cover letters, and understanding skill gaps is time-consuming and inefficient, resulting in poorly formatted applications that may not highlight relevant skills effectively.
 
 ## **Key Features**:-
 
