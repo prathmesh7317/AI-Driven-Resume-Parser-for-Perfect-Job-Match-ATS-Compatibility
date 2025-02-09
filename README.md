@@ -10,7 +10,7 @@ Job seekers often struggle to optimize their resumes for specific job descriptio
 ###### 2. Extract text using OCR (pytesseract) and DOCX parsers.
 ###### 3. Preprocess extracted text using SpaCy for skill and keyword identification.
 ###### 4. Calculate JD-resume skill alignment using TF-IDF Vectorizer and cosine similarity.
-###### 5. Provide personalized resume improvement suggestions using OpenAI API.
+###### 5. Provide personalized resume improvement suggestions using deepseek.
 ###### 6. Generate ATS scores and AI skill recommendations.
 ###### 7. Create tailored cover letters with AI Agents for accuracy and scalability.
 ###### 8. Enable interactive chatbot functionality for resume-based insights.
